@@ -23,7 +23,7 @@ import {
   CircularProgress,
   Alert,
 } from '@mui/material';
-import { ArrowBack, Add, Person, Delete, Chat, Search } from '@mui/icons-material';
+import { ArrowBack, Add, Person, Delete, Chat } from '@mui/icons-material';
 import axios from 'axios';
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
@@ -64,6 +64,7 @@ const EmergencyContacts: React.FC = () => {
     } else {
       setSearchResults([]);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchQuery]);
 
   const fetchContacts = async () => {
