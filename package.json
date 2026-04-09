@@ -1,0 +1,33 @@
+{
+  "name": "safecommute",
+  "version": "1.0.0",
+  "description": "Women's safety travel application with real-time tracking and emergency features",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "cd client && npm install && cd ../server && npm install",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "test": "echo \"Tests not yet implemented\"",
+    "deploy": "npm run build && npm run deploy:client && npm run deploy:server",
+    "deploy:client": "cd client && npm run deploy",
+    "deploy:server": "cd server && npm run deploy"
+  },
+  "keywords": [
+    "safety",
+    "women-safety",
+    "travel",
+    "emergency",
+    "location-tracking"
+  ],
+  "author": "Kavya Sharma",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kavyasharma27/safecommute"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
